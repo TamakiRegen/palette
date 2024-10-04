@@ -29,12 +29,12 @@ trc_main_colours <- function(reverse = FALSE) {
 #' @param reverse Logical. If TRUE, reverses the order of the colors.
 #' @return A character vector of hex color codes representing blue shades.
 #' @examples
-#' blue_shades()      # Default order
-#' blue_shades(TRUE)  # Reversed order
+#' trc_blues()      # Default order
+#' trc_blues(TRUE)  # Reversed order
 #' @export
-blue_shades <- function(reverse = FALSE) {
+trc_blues <- function(reverse = FALSE) {
   colors <- c(
-    "#6aa4eb", "#5597e8", "#3f8ae5", "#2a7de2",
+    "#7fb1ee", "#6aa4eb", "#5597e8", "#3f8ae5", "#2a7de2",
     "#2671cb", "#2264b5", "#1d589e"
   )
   if (reverse) {
@@ -50,12 +50,12 @@ blue_shades <- function(reverse = FALSE) {
 #' @param reverse Logical. If TRUE, reverses the order of the colors.
 #' @return A character vector of hex color codes representing teal shades.
 #' @examples
-#' teal_shades()      # Default order
-#' teal_shades(TRUE)  # Reversed order
+#' trc_teals()      # Default order
+#' trc_teals(TRUE)  # Reversed order
 #' @export
-teal_shades <- function(reverse = FALSE) {
+trc_teals <- function(reverse = FALSE) {
   colors <- c(
-    "#5be0d6", "#44dcd1", "#2cd7cb", "#15d3c5",
+    "#73e5dc","#5be0d6", "#44dcd1", "#2cd7cb", "#15d3c5",
     "#13beb1", "#11a99e", "#0f948a"
   )
   if (reverse) {
@@ -71,12 +71,12 @@ teal_shades <- function(reverse = FALSE) {
 #' @param reverse Logical. If TRUE, reverses the order of the colors.
 #' @return A character vector of hex color codes representing red shades.
 #' @examples
-#' red_shades()      # Default order
-#' red_shades(TRUE)  # Reversed order
+#' trc_reds()      # Default order
+#' trc_reds(TRUE)  # Reversed order
 #' @export
-red_shades <- function(reverse = FALSE) {
+trc_reds <- function(reverse = FALSE) {
   colors <- c(
-    "#f5929a", "#f4828b", "#f2737d", "#f1636e",
+    "#f7a1a8","#f5929a", "#f4828b", "#f2737d", "#f1636e",
     "#d95963", "#c14f58", "#a9454d"
   )
   if (reverse) {
@@ -92,12 +92,12 @@ red_shades <- function(reverse = FALSE) {
 #' @param reverse Logical. If TRUE, reverses the order of the colors.
 #' @return A character vector of hex color codes representing purple shades.
 #' @examples
-#' purple_shades()      # Default order
-#' purple_shades(TRUE)  # Reversed order
+#' trc_purples()      # Default order
+#' trc_purples(TRUE)  # Reversed order
 #' @export
-purple_shades <- function(reverse = FALSE) {
+trc_purples <- function(reverse = FALSE) {
   colors <- c(
-    "#9067bb", "#8051b1", "#703ca8", "#60269e",
+    "#a07dc5","#9067bb", "#8051b1", "#703ca8", "#60269e",
     "#56228e", "#4d1e7e", "#431b6f"
   )
   if (reverse) {
@@ -113,17 +113,17 @@ purple_shades <- function(reverse = FALSE) {
 #' @param reverse Logical. If TRUE, reverses the order of the colors.
 #' @return A character vector of hex color codes representing the extended main colors.
 #' @examples
-#' trc_main_extended()      # Default order
-#' trc_main_extended(TRUE)  # Reversed order
+#' trc_extended()      # Default order
+#' trc_extended(TRUE)  # Reversed order
 #' @export
-trc_main_extended <- function(reverse = FALSE) {
+trc_extended <- function(reverse = FALSE) {
   colors <- c(
-    "#3f8ae5", "#2a7de2", "#2671cb",  # blue shades
-    "#2cd7cb", "#15d3c5", "#13beb1",  # teal shades
-    "#f2737d", "#f1636e", "#d95963",  # red shades
-    "#703ca8", "#60269e", "#56228e",  # purple shades
-    "#ff8c45", "#ff7f30", "#e6722b"   # orange shades
-  )
+    "#2a7de2","#15d3c5","#f1636e","#60269e","#ff7f30",
+    "#3f8ae5","#2cd7cb","#f2737d","#703ca8","#ff8c45",
+    "#5597e8","#44dcd1","#f4828b","#8051b1","#ff9959",
+    "#6aa4eb","#5be0d6","#f5929a","#9067bb","#ffa56e",
+    "#7fb1ee","#73e5dc","#f7a1a8","#a07dc5","#ffb283"
+    )
   if (reverse) {
     return(rev(colors))
   }
@@ -137,12 +137,12 @@ trc_main_extended <- function(reverse = FALSE) {
 #' @param reverse Logical. If TRUE, reverses the order of the colors.
 #' @return A character vector of hex color codes representing orange shades.
 #' @examples
-#' orange_shades()      # Default order
-#' orange_shades(TRUE)  # Reversed order
+#' trc_oranges()      # Default order
+#' trc_oranges(TRUE)  # Reversed order
 #' @export
-orange_shades <- function(reverse = FALSE) {
+trc_oranges <- function(reverse = FALSE) {
   colors <- c(
-    "#ffa56e", "#ff9959", "#ff8c45", "#ff7f30",
+    "#ffb283","#ffa56e", "#ff9959", "#ff8c45", "#ff7f30",
     "#e6722b", "#cc6626", "#b35922"
   )
   if (reverse) {
@@ -167,7 +167,6 @@ list_trc_main_colours <- function() {
     "purple" = "#60269E",
     "orange" = "#FF7F30"
   )
-
   # Convert to a data frame
   color_df <- data.frame(
     name = names(colors),
