@@ -4,8 +4,6 @@ The `trcpalette` package provides a collection of custom colour palettes designe
 
 ## Installation
 
-To install the package, run:
-
 ```r
 # Install the latest version from GitHub
 devtools::install_github("TamakiRegen/palette")
@@ -27,13 +25,13 @@ trc_main_colours(reverse = FALSE)
 
 ### Shades
 There are functions to provide seven shades each of blue, red, teal, purple and orange. 
-`blue_shades()`  `teal_shades()` `red_shades()` `purple_shades()`  `orange_shades()` 
+`trc_blues()`  `trc_teals()` `trc_reds()` `trc_purples()`  `trc_oranges()` 
 
 - **reverse:** Set to `TRUE` to reverse the order of the colors.
 
 ### Extended TRC Palette
 
-The `trc_main_extended()` function returns an extended version of the main TRC colors, including the main colours plus a shade lighter and darker of each:
+The `trc_main_extended()` function returns an extended version of the main TRC colors, and four iterations of progressively lighter shades, for a total of 20 colour values.
 
 ```r
 trc_main_extended(reverse = FALSE)
@@ -88,7 +86,7 @@ ggplot(faithful, aes(x = eruptions, y = waiting, fill = eruptions)) +
 ```r
 ggplot(faithful, aes(x = eruptions, y = waiting, color = eruptions)) +
   geom_point() +
-  scale_colour_trc_continuous(palette = blue_shades)
+  scale_colour_trc_continuous(palette = trc_blues)
 ```
 ## Discrete Colour Scales
 
